@@ -16,6 +16,8 @@ def button_clicked():
     print("Button click")
     ytDownload.download(link.get(), ask_directory())
 
+def button_exit():
+    app.quit()
 
 def ask_directory():
     print("Button click folder")
@@ -34,5 +36,8 @@ link.pack(pady=12, padx=10)
 
 button_1 = customtkinter.CTkButton(master=frame_1, command=button_clicked, text="Pobierz Film")
 button_1.pack(pady=12, padx=10)
+
+button_2 = customtkinter.CTkButton(master=frame_1, command=button_exit, text="Zamknij")
+button_2.pack(pady=12, padx=10)
 
 app.mainloop()
